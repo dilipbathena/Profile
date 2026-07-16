@@ -3,415 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Dilip Bathena - Senior Capacity & Performance Manager | Data Analytics & AI</title>
+    <title>My Resume</title>
     <style>
-        :root {
-            --primary: #1e293b;
-            --secondary: #0f172a;
-            --accent: #2563eb;
-            --text-main: #334155;
-            --text-light: #64748b;
-            --bg-light: #f8fafc;
-            --border: #e2e8f0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Global Styles */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-main);
-            background-color: var(--bg-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 40px 20px;
         }
 
-        .container {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            min-height: 100vh;
+        /* Main Container */
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        /* Sidebar Styling */
-        sidebar {
-            background-color: var(--primary);
+        /* Top Action Bar (PDF Link) */
+        .top-bar {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        
+        .btn-pdf {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c3e50;
             color: #ffffff;
-            padding: 40px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
         }
 
-        .profile-section {
-            text-align: center;
+        .btn-pdf:hover {
+            background-color: #1a252f;
+        }
+
+        /* Header Layout */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 30px;
             margin-bottom: 30px;
         }
 
-        .profile-img {
+        /* Profile Image */
+        .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 4px solid var(--accent);
             object-fit: cover;
-            margin-bottom: 15px;
-            background-color: #fff;
+            border: 4px solid #ecf0f1;
         }
 
-        .sidebar h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
+        /* Header Text */
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #2c3e50;
         }
 
-        .sidebar h2 {
-            font-size: 14px;
-            color: #cbd5e1;
+        .header-text h2 {
+            margin: 5px 0 15px;
+            font-size: 1.2rem;
+            color: #7f8c8d;
             font-weight: 400;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .contact-info {
-            margin-bottom: 35px;
-            font-size: 14px;
+        .header-text p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
         }
 
-        .contact-item {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            color: #e2e8f0;
-        }
-
-        .sidebar-section {
-            margin-bottom: 35px;
-        }
-
-        .sidebar-section h3 {
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 5px;
-            color: #fff;
-        }
-
-        .sidebar-list {
-            list-style: none;
-            font-size: 14px;
-            color: #cbd5e1;
-        }
-
-        .sidebar-list li {
-            margin-bottom: 8px;
-        }
-
-        /* Main Content Styling */
-        main {
-            padding: 50px 50px;
-            background-color: #ffffff;
-        }
-
-        .summary-box {
-            background-color: var(--bg-light);
-            border-left: 4px solid var(--accent);
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 40px;
-            font-size: 16px;
-        }
-
-        section {
-            margin-bottom: 45px;
-        }
-
-        .section-title {
-            font-size: 22px;
-            color: var(--secondary);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 8px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Experience Timeline */
-        .timeline-item {
+        /* Section Styles */
+        .section {
             margin-bottom: 30px;
-            position: relative;
         }
 
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
+        .section h3 {
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
         }
 
-        .job-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--secondary);
+        /* Experience and Education Items */
+        .item {
+            margin-bottom: 20px;
         }
 
-        .company {
-            font-size: 15px;
-            color: var(--accent);
-            font-weight: 600;
+        .item h4 {
+            margin: 0 0 5px;
+            color: #2c3e50;
+            font-size: 1.1rem;
         }
 
-        .duration {
-            font-size: 14px;
-            color: var(--text-light);
+        .item .date {
             font-style: italic;
-        }
-
-        .bullet-list {
-            padding-left: 20px;
-            font-size: 15px;
-        }
-
-        .bullet-list li {
-            margin-bottom: 6px;
-        }
-
-        /* Grid layouts for technical items */
-        .skills-grid, .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-card, .project-card {
-            background-color: var(--bg-light);
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-
-        .skill-card h4, .project-card h4 {
-            color: var(--secondary);
+            color: #7f8c8d;
+            font-size: 0.9rem;
             margin-bottom: 10px;
-            font-size: 16px;
         }
 
-        /* Publications styles */
-        .pub-item {
-            margin-bottom: 12px;
-            font-size: 14px;
-            padding-left: 15px;
-            border-left: 2px solid var(--border);
+        .item ul {
+            margin-top: 10px;
+            padding-left: 20px;
         }
 
-        .pub-title {
-            font-weight: 600;
-            color: var(--secondary);
+        /* Skills List */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #ecf0f1;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #2c3e50;
         }
 
         /* Responsive Design */
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr;
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
             }
-            sidebar {
-                padding: 30px;
-            }
-            main {
-                padding: 30px;
+            .top-bar {
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <!-- SIDEBAR -->
-    <sidebar class="sidebar">
-        <div class="profile-section">
-            <!-- Replace with your actual hosted image path -->
-            <img src="your-photo.jpg" alt="Dr. Dilip Bathena" class="profile-img">
-            <h1>Dr. Dilip Bathena</h1>
-            <h2>Senior Capacity & Performance Manager | Data Analytics & AI</h2>
+    <div class="resume-container">
+        
+        <!-- PDF Download Link -->
+        <div class="top-bar">
+            <!-- Ensure your PDF file is named "resume.pdf" and is in the same folder -->
+            <a href="resume.pdf" target="_blank" class="btn-pdf">📄 View as PDF</a>
         </div>
 
-        <div class="contact-info">
-            <div class="contact-item">📧 dilip.bath@gmail.com</div>
-            <div class="contact-item">📱 +91 9542702606</div>
-            <div class="contact-item">📅 DOB: 14/07/1983</div>
-            <div class="contact-item">📍 Hyderabad, India</div>
-        </div>
-
-        <div class="sidebar-section">
-            <h3>Core Expertise</h3>
-            <ul class="sidebar-list">
-                <li>Capacity & Performance Planning</li>
-                <li>SRE & Multi-Cloud Architecture</li>
-                <li>Generative AI & Prompt Eng.</li>
-                <li>Hallucination Prevention</li>
-                <li>Data Analytics (SPSS, Python)</li>
-                <li>ITIL Operations & Infrastructure</li>
-            </ul>
-        </div>
-
-        <div class="sidebar-section">
-            <h3>Certifications</h3>
-            <ul class="sidebar-list">
-                <li>PMP (Trained)</li>
-                <li>Prince2 Practitioner</li>
-                <li>Microsoft Azure Architect</li>
-                <li>AWS Cloud Practitioner</li>
-                <li>Azure AI Fundamentals</li>
-                <li>Cognizant Prompt Engineering</li>
-                <li>IBM Data Science Certified</li>
-                <li>ITIL Foundation V3</li>
-            </ul>
-        </div>
-
-        <div class="sidebar-section">
-            <h3>Memberships</h3>
-            <ul class="sidebar-list">
-                <li>Life Member: International Sociological Association</li>
-                <li>Life Member: Public Relations Society of India</li>
-            </ul>
-        </div>
-    </sidebar>
-
-    <!-- MAIN CONTENT -->
-    <main>
-        <!-- Professional Summary -->
-        <div class="summary-box">
-            <strong>Professional Summary:</strong> PMP-trained Senior Capacity & Performance Manager / SRE / Hybrid Cloud Operations Architect with 15+ years of experience specializing in capacity planning, performance management, ITIL processes, and hybrid cloud operations (AWS, Azure, GCP, VMware). Expert in data analytics (SPSS, Python, Advanced Excel, Power BI), Generative AI, Prompt Engineering, Context Engineering, Azure AI, and techniques to prevent hallucinations in LLM outputs. Ph.D. focused on Data Analytics & Research.
-        </div>
-
-        <!-- Key Achievements -->
-        <section id="achievements">
-            <h2 class="section-title">Key Achievements</h2>
-            <ul class="bullet-list">
-                <li><strong>30% Downtime Reduction:</strong> Achieved across enterprise production workloads via predictive forecasting models.</li>
-                <li><strong>25% Resource Optimization:</strong> Improved hyper-scaler utilization through advanced capacity analytics.</li>
-                <li><strong>Global Research Impact:</strong> Successfully executed multiple UN & National level technical system architectures.</li>
-            </ul>
-        </section>
-
-        <!-- Experience -->
-        <section id="experience">
-            <h2 class="section-title">Professional Experience</h2>
+        <!-- Header: Photo and Info -->
+        <div class="header">
+            <!-- Ensure your JPG file is named "profile.jpg" and is in the same folder -->
+            <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
             
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="job-title">Senior Capacity & Performance Manager / SRE</div>
-                        <div class="company">Cognizant (Travelport & Toyota Accounts)</div>
-                    </div>
-                    <div class="duration">Nov 2024 - Present</div>
-                </div>
-                <ul class="bullet-list">
-                    <li>Lead capacity management and engineering for hybrid multi-cloud operations (AWS, Azure, GCP).</li>
-                    <li>Utilize Python, SPSS, and Power BI for proactive resource optimization and advanced trend analysis.</li>
-                    <li>Deploy Generative AI and Azure AI Context Engineering strategies to modern monitoring suites while ensuring strict hallucination mitigation frameworks.</li>
-                    <li>Orchestrate automated provisioning utilizing Terraform Infrastructure as Code (IaC).</li>
+            <div class="header-text">
+                <h1>Your Full Name</h1>
+                <h2>Professional Title (e.g., Software Engineer)</h2>
+                <p>📧 email@example.com | 📱 (123) 456-7890</p>
+                <p>📍 City, State, Country | 🔗 linkedin.com/in/yourprofile</p>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h3>Professional Summary</h3>
+            <p>A highly motivated and results-driven professional with experience in [Your Field]. Proven ability to [Key Skill/Achievement]. Looking to leverage my skills in [Area of Expertise] to contribute to a dynamic team.</p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+            <h3>Work Experience</h3>
+            
+            <div class="item">
+                <h4>Job Title - Company Name</h4>
+                <div class="date">Jan 2020 - Present | City, State</div>
+                <ul>
+                    <li>Key achievement or responsibility goes here. Use action verbs.</li>
+                    <li>Quantify your results when possible (e.g., increased sales by 15%).</li>
+                    <li>Describe the impact you had on the team or company.</li>
                 </ul>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="job-title">Capacity Manager (70+ Shared Enterprise Accounts)</div>
-                        <div class="company">IBM / Kyndryl</div>
-                    </div>
-                    <div class="duration">2016 - 2024</div>
-                </div>
-                <ul class="bullet-list">
-                    <li>Directed site reliability practices, multi-tenant baseline optimization, and critical resource scaling for 70+ client systems.</li>
-                    <li>Engineered reliable data-backed forecasting mechanisms using advanced Excel modeling and custom Python scripts.</li>
-                    <li>Implemented robust AI-assisted health monitoring mechanisms aligned tightly to strict SLA/ITIL standards.</li>
+            <div class="item">
+                <h4>Previous Job Title - Previous Company Name</h4>
+                <div class="date">Jun 2017 - Dec 2019 | City, State</div>
+                <ul>
+                    <li>Key achievement or responsibility goes here.</li>
+                    <li>Collaborated with team members to achieve project goals.</li>
                 </ul>
             </div>
+        </div>
 
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="job-title">Technical Support & System Administrator</div>
-                        <div class="company">MYOB, Burwood (Australia)</div>
-                    </div>
-                    <div class="duration">2011</div>
-                </div>
-                <ul class="bullet-list">
-                    <li>Delivered specialized remote operating system administration, network topology configurations, and performance debugging.</li>
-                </ul>
+        <!-- Education Section -->
+        <div class="section">
+            <h3>Education</h3>
+            <div class="item">
+                <h4>Degree Name (e.g., Bachelor of Science in Computer Science)</h4>
+                <div class="date">University Name | Graduated: May 2017</div>
             </div>
-        </section>
+        </div>
 
-        <!-- Technical Skills -->
-        <section id="skills">
-            <h2 class="section-title">Technical Skills Split</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>AI & Analytics</h4>
-                    <p>SPSS (Regression, T-Test, Forecasting), Python, Power BI, Azure AI, Prompt/Context Engineering, LLM Verification frameworks.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Cloud & Infrastructure</h4>
-                    <p>AWS (EC2, VPC, IAM), VMware (vROps, ESXi, vCenter), GCP, Azure, OpenShift, Terraform IaC, Storage (SAN/NAS).</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Monitoring & Management</h4>
-                    <p>Splunk, Datadog, Grafana, Zabbix, Project Frameworks (Agile, Scrum, Prince2, PMP, ITIL Change/Incident processes).</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research & Projects -->
-        <section id="projects">
-            <h2 class="section-title">Selected Technical & UN Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h4>UGC Doctoral & State Projects (2016 - 2022)</h4>
-                    <p>Applied extensive SPSS analytics evaluating complex ICT implementations on socio-economic landscapes.</p>
-                </div>
-                <div class="project-card">
-                    <h4>NIRDPR - UN Research Architectures (2012 - 2016)</h4>
-                    <p>Primary technology member for critical spatial GIS-APIB system designs, E-Office implementations, and rural dashboards.</p>
-                </div>
-                <div class="project-card">
-                    <h4>IBM Smart City Project (2016 - 2017)</h4>
-                    <p>Core engineer executing core system integrations and scalable operational blueprints.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section id="education">
-            <h2 class="section-title">Academic Qualifications</h2>
-            <ul class="bullet-list">
-                <li><strong>Ph.D.</strong> - Impact of ICT on Socio-Economic Development — Nagarjuna University</li>
-                <li><strong>M.Sc. (GIS)</strong> — Annamalai University</li>
-                <li><strong>M.Sc. (IT)</strong> — Nagarjuna University</li>
-                <li><strong>B.Sc. (Computers)</strong> & <strong>M.A. (Sociology)</strong> — Nagarjuna University</li>
-                <li><strong>Advanced Diploma in Business Management</strong> — Holmesglen TAFE, Melbourne, Australia</li>
+        <!-- Skills Section -->
+        <div class="section">
+            <h3>Skills</h3>
+            <ul class="skills-list">
+                <li>Skill One</li>
+                <li>Skill Two</li>
+                <li>Skill Three</li>
+                <li>Skill Four</li>
+                <li>Skill Five</li>
             </ul>
-        </section>
+        </div>
 
-        <!-- Publications -->
-        <section id="publications">
-            <h2 class="section-title">Publications & Patents</h2>
-            <div class="pub-item">
-                <span class="pub-title">Model Development:</span> "Green Computing - DILIP Model (Development of IT with Low Investment Procedure)" — Vasavi College of Engineering (ISBN).
-            </div>
-            <div class="pub-item">
-                <span class="pub-title">Book Published:</span> "Socio-Economic Dimensions and ICT" (Registered ISBN).
-            </div>
-            <div class="pub-item">
-                <span class="pub-title">Journal Publication:</span> "ICT for Digital Banking & E-Commerce in Rural Communities" — Indian Journal of Applied Research.
-            </div>
-            <div class="pub-item">
-                <span class="pub-title">Journal Publication:</span> "ICT Usage, Happiness & Stress in Agriculture Sector" — IJCRT.
-            </div>
-        </section>
-    </main>
-</div>
+    </div>
 
 </body>
 </html>
