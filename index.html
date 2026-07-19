@@ -7,17 +7,17 @@
     <style>
         /* Modern Tailwind-Inspired CSS Variables */
         :root {
-            --bg-page: #f8fafc; /* slate-50 */
+            --bg-page: #f8fafc; 
             --bg-card: #ffffff;
-            --text-main: #334155; /* slate-700 */
-            --text-muted: #64748b; /* slate-500 */
-            --text-heading: #0f172a; /* slate-900 */
-            --primary: #2563eb; /* blue-600 */
-            --primary-hover: #1d4ed8; /* blue-700 */
-            --accent: #e0f2fe; /* sky-100 */
-            --accent-text: #0369a1; /* sky-700 */
-            --border-color: #e2e8f0; /* slate-200 */
-            --header-bg: #1e293b; /* slate-800 */
+            --text-main: #334155; 
+            --text-muted: #64748b; 
+            --text-heading: #0f172a; 
+            --primary: #2563eb; 
+            --primary-hover: #1d4ed8; 
+            --accent: #e0f2fe; 
+            --accent-text: #0369a1; 
+            --border-color: #e2e8f0; 
+            --header-bg: #1e293b; 
         }
 
         /* Global Styles */
@@ -102,11 +102,12 @@
         }
 
         .header-info h2 {
-            margin: 8px 0 20px 0;
-            font-size: 1.2rem;
-            color: #93c5fd; /* blue-300 */
+            margin: 8px 0 15px 0;
+            font-size: 1.15rem;
+            color: #93c5fd; 
             font-weight: 500;
             letter-spacing: 0.025em;
+            line-height: 1.4;
         }
 
         .contact-grid {
@@ -114,7 +115,18 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 12px;
             font-size: 0.95rem;
-            color: #cbd5e1; /* slate-300 */
+            color: #cbd5e1; 
+        }
+
+        .contact-grid a {
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-grid a:hover {
+            color: #ffffff;
+            text-decoration: underline;
         }
 
         /* Layout Structure */
@@ -202,7 +214,7 @@
         }
         
         .github-link:hover {
-            background: #bae6fd; /* sky-200 */
+            background: #bae6fd; 
             color: var(--primary-hover);
         }
 
@@ -263,11 +275,13 @@
             
             <div class="header-info">
                 <h1>Dr. Dilip Bathena</h1>
-                <h2>Senior Capacity & Performance Manager | SRE | AI Cloud & Data Analytics</h2>
+                <!-- Updated Title[cite: 2] -->
+                <h2>Multi-Disciplinary Scientist AI OPS, CLOUD & DATA ANALYTICS <br> Socioeconomics | Rural Technologies | ICT for RD</h2>
                 <div class="contact-grid">
                     <div>✉️ dilip.bath@gmail.com</div>
                     <div>📱 +91 9542702606</div>
-                    <div>📅 DOB: 14/07/1983</div>
+                    <!-- Added Website[cite: 2] -->
+                    <div>🌐 <a href="https://dilipbathena.github.io/Profile/" target="_blank">Dr. Dilip Bathena - Resume</a></div>
                     <div>📍 Hyderabad, India</div>
                 </div>
             </div>
@@ -281,8 +295,9 @@
                 
                 <div class="block">
                     <h3 class="section-title">Professional Summary</h3>
+                    <!-- Updated Summary with Research Scientist & Google LLM[cite: 2] -->
                     <p class="summary-text">
-                        PMP-trained Senior Capacity & Performance Manager / SRE / Hybrid Cloud Operations Architect with 15+ years of experience specializing in capacity planning, performance management, ITIL processes, and hybrid cloud operations (AWS, Azure, GCP, VMware). Expert in data analytics (SPSS, Python, Advanced Excel, Power BI), Generative AI, Prompt Engineering, Context Engineering, and techniques to prevent hallucinations in LLM outputs. Delivered 30% downtime reduction and 25% improvement in resource utilization through advanced performance forecasting and predictive capacity management. Ph.D. - ICT & Socio-Economic Development.
+                        PMP-trained Senior Capacity & Performance Manager and Research Scientist / SRE / Hybrid Cloud Operations Architect with 15+ years of experience specializing in capacity planning, performance management, ITIL processes, and hybrid cloud operations (AWS, Azure, VMware). Expert in data analytics (SPSS, Python, Advanced Excel, Power BI), Generative AI, Prompt Engineering, Context Engineering, Google LLM Notebooks, Azure AI, and techniques to prevent hallucinations in LLM outputs. Delivered 30% downtime reduction and 25% improvement in resource utilization through advanced performance forecasting and predictive capacity management. Ph.D. - ICT & Socio-Economic Research Development (Data Analytics & Research focused).
                     </p>
                 </div>
 
@@ -294,24 +309,31 @@
                             <h4 class="block-title">Senior Capacity & Performance Manager / SRE</h4>
                             <span class="block-meta">Nov 2024 - Present</span>
                         </div>
-                        <div class="block-org">Cognizant (Travelport & Toyota Accounts)</div>
+                        <div class="block-org">Cognizant</div>
                         <ul>
-                            <li>Led capacity planning and performance management for hybrid cloud operations across AWS, Azure, and GCP.</li>
+                            <!-- Updated cloud list[cite: 2] -->
+                            <li>Led capacity planning and performance management for hybrid cloud operations across AWS, Azure.</li>
+                            <!-- Added new bullet[cite: 2] -->
+                            <li>Capacity Demand Management and Optimization.</li>
                             <li>Applied data analytics (SPSS, Python, Advanced Excel, Power BI) for performance forecasting and proactive resource optimization.</li>
                             <li>Utilized Generative AI, Prompt Engineering, Context Engineering, and Azure AI for reliable monitoring while preventing hallucinations.</li>
                             <li>Executed Terraform automation and ITIL-based incident/change management.</li>
+                            <!-- Added Hackathon achievement[cite: 2] -->
+                            <li>Participated in Vibe Coding Hackathon and Won Guiness Record Certificate.</li>
                         </ul>
                     </div>
 
                     <div class="block">
                         <div class="block-header">
-                            <h4 class="block-title">Capacity Manager (70+ Shared Accounts)</h4>
+                            <!-- Updated title[cite: 2] -->
+                            <h4 class="block-title">Capacity and Performance Management and Research</h4>
                             <span class="block-meta">2016 - 2024</span>
                         </div>
-                        <div class="block-org">IBM / Kyndryl</div>
+                        <div class="block-org">IBM / Kyndryl (Banking, Airlines, Automative, Retail, Research domains)</div>
                         <ul>
-                            <li>Directed SRE Practices, capacity planning, and performance management across 70+ enterprise accounts using advanced data analytics.</li>
-                            <li>Achieved 30% reduction in downtime and 25% improvement in resource utilization through predictive performance forecasting and capacity modeling.</li>
+                            <!-- Updated techniques phrasing[cite: 2] -->
+                            <li>Directed SRE Practices, capacity planning and performance management accounts using advanced research technics and data analytics.</li>
+                            <li>Achieved 30% reduction in downtime and 25% improvement in resource utilization through predictive performance forecasting and capacity modeling (SPSS, Python, Power BI).</li>
                             <li>Applied Generative AI and Prompt Engineering expertise to build reliable AI-assisted performance monitoring solutions with effective hallucination prevention.</li>
                             <li>Ensured SLA compliance using ITIL frameworks.</li>
                         </ul>
@@ -330,7 +352,8 @@
                         </li>
                         <li><strong>Smart City Project (IBM):</strong> Primary Member managing solution deployment and optimization (2016-2017).</li>
                         <li><strong>NGO - SBI CSR Rural Health ICT Project:</strong> Handled technical infrastructure setup and tracking dashboards (2016-2021).</li>
-                        <li><strong>UN & NIRDPR Research Projects:</strong> Primary Member for GIS-APIB Mapping, Plotting, and CIRIDAP Rural Tech Centres design (2012-2016).</li>
+                        <!-- Updated NIRDPR title[cite: 2] -->
+                        <li><strong>UN & NIRDPR Research Projects:</strong> Applied data analytics as a Research Scientist in national & international UN technical projects (GIS Mapping, Dashboards, E-Governance).</li>
                     </ul>
                 </div>
 
@@ -373,7 +396,8 @@
                     <h3 class="section-title">Education</h3>
                     
                     <div style="margin-bottom: 18px;">
-                        <div style="font-weight: 700; font-size: 1rem; color: var(--text-heading);">Ph.D. - ICT & Socio-Economic Development</div>
+                        <!-- Updated PhD Name[cite: 2] -->
+                        <div style="font-weight: 700; font-size: 1rem; color: var(--text-heading);">Ph.D. - ICT & Socio-Economic Research Development</div>
                         <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2px;">Nagarjuna University</div>
                     </div>
 
